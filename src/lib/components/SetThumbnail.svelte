@@ -6,23 +6,23 @@
     MediaContent,
   } from "@smui/card";
 
-  let clicked = 0;
+  export let roundTitle : string;
+  export let player1Tag : string;
+  export let player2Tag : string;
 </script>
 
 <div class="card-container">
-  <Card>
-    <PrimaryAction on:click={() => clicked++} style="padding:0 20px;">
+  <Card style="margin: 10px;">
+    <PrimaryAction style="padding:0 20px;">
       <Content>
-        <b>winner's pools</b><br />
-        sgg user 1<br />
+        <b>{roundTitle}</b><br />
+        {player1Tag} <br />
         vs<br />
-        sgg user 2
+        {player2Tag}
       </Content>
     </PrimaryAction>
   </Card>
 </div>
-
-<pre class="status">Clicked: {clicked}</pre>
 
 <style>
   .card-container {
